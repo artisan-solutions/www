@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-txt-plain: hsl(0, 0%, 12.5%);
+    --clr-txt-highlight: hsl(0, 0%, 0%);
+}
+
+body {
+    font-family: "Public Sans", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    color: var(--clr-txt-plain);
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 1rem;
+    margin-inline: auto;
+}
+
+section {
+    background-color: hsl(0, 0%, 95%);
+}
+
+section:nth-of-type(even) {
+    background-color: hsl(0, 0%, 90%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    color: var(--clr-txt-highlight);
+}
