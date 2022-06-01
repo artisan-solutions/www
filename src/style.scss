@@ -46,8 +46,23 @@ body {
     display: block;
 }
 
-footer {
-    text-align: center;
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 4rem;
+    padding: 5px;
+    gap: 5px;
+}
+
+#header-logo {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#header-logo img {
+    height: 100%;
 }
 
 section {
@@ -56,6 +71,14 @@ section {
 
 section:nth-of-type(even) {
     background-color: hsl(0, 0%, 90%);
+}
+
+.footer {
+    text-align: center;
+}
+
+.gray-i-guess {
+    color: hsl(0, 0%, 50%)
 }
 
 h1,
