@@ -24,6 +24,32 @@ body {
     margin-inline: auto;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-i-guess {
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px hsl(0, 0%, 12.5%, 50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 90%);
+    align-items: center;
+}
+
+.card-i-guess img {
+    border-radius: 5px;
+    width: 60%;
+    display: block;
+}
+
+footer {
+    text-align: center;
+}
+
 section {
     background-color: hsl(0, 0%, 95%);
 }
