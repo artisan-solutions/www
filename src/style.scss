@@ -7,10 +7,14 @@
 :root {
     --clr-txt-plain: hsl(0, 0%, 12.5%);
     --clr-txt-highlight: hsl(0, 0%, 0%);
+    --shadow: 0px 2px 3px hsl(0, 0%, 12.5%, 20%),
+        0px 0px 3px hsl(0, 0%, 12.5%, 20%);
+    --border-radius: 0.2rem;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 4rem);
 }
 
 body {
@@ -23,13 +27,18 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    min-height: 4rem;
-    padding: 5px 4rem;
-    gap: 1vw;
+    background-color: #fff;
+    padding: 0.8rem 4rem;
+    gap: 1rem;
+    box-shadow: var(--shadow);
 }
 
 @media only screen and (max-width: 600px) {
@@ -61,21 +70,20 @@ nav {
     justify-content: space-around;
     align-items: flex-start;
     gap: 15px;
-    height: 33px;
-}
 
-nav a {
-    color: black;
-    text-decoration: none;
-    padding-bottom: 5px;
-    border-bottom: 1px solid black;
-    min-width: 70px;
-    text-align: center;
-    transition: border-bottom 200ms, margin-bottom 200ms;
-}
+    a {
+        color: black;
+        text-decoration: none;
+        padding: 0.33rem;
+        border-bottom: 1px solid black;
+        text-align: center;
+        transition: border-bottom 200ms, margin-bottom 200ms;
 
-nav a:hover {
-    border-bottom: 7px solid black;
+        &:hover {
+            border-bottom: 5px solid black;
+            margin-bottom: -4px;
+        }
+    }
 }
 
 .container {
@@ -84,38 +92,42 @@ nav a:hover {
     margin-inline: auto;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+    justify-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+
+    .card {
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 98%);
+        padding: 1.5rem;
+        align-items: center;
+
+        img {
+            border-radius: var(--border-radius);
+            width: 60%;
+            display: block;
+        }
+
+        h3 {
+            margin-top: 0rem;
+        }
+    }
 }
 
-section {
+section,
+footer {
     background-color: hsl(0, 0%, 95%);
-}
 
-section:nth-of-type(even) {
-    background-color: hsl(0, 0%, 90%);
-}
-
-.card-i-guess {
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px hsl(0, 0%, 12.5%, 50%);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: hsl(0, 0%, 90%);
-    min-width: 300px;
-    max-width: 450px;
-    align-items: center;
-}
-
-.card-i-guess img {
-    border-radius: 5px;
-    width: 60%;
-    display: block;
+    &:nth-of-type(even) {
+        background-color: hsl(0, 0%, 90%);
+    }
 }
 
 .contact-information {
@@ -126,37 +138,38 @@ section:nth-of-type(even) {
     flex-wrap: wrap;
     text-align: center;
     gap: 1rem;
-}
 
-.contact-information div {
-    width: 100%;
-    max-width: 300px;
-}
+    div {
+        width: 100%;
+        max-width: 300px;
 
-.contact-information div h4 {
-    width: 100%;
-    margin: 0;
-    padding: 4px;
-}
+        h4 {
+            width: 100%;
+            margin: 0;
+            padding: 4px;
+        }
 
-.contact-information div code {
-    display: block;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: hsl(0, 0%, 80%);
-    padding: 4px;
-    margin: 4px;
-    width: 100%;
-    text-align: center;
-    border-radius: 2px;
+        code {
+            display: block;
+            font-size: 16px;
+            font-family: "Red Hat Mono", "Courier New", Courier, monospace;
+            background-color: hsl(0, 0%, 98%);
+            padding: 4px;
+            margin: 8px 0;
+            width: 100%;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+    }
 }
 
 .footer {
     text-align: center;
-}
 
-.gray-i-guess {
-    color: hsl(0, 0%, 50%)
+    p {
+        color: hsl(0, 0%, 50%);
+    }
 }
 
 h1,
