@@ -9,6 +9,10 @@
     --clr-txt-highlight: hsl(0, 0%, 0%);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Public Sans", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -18,41 +22,27 @@ body {
     margin: 0;
 }
 
-.container {
-    max-width: 1000px;
-    padding: 1rem;
-    margin-inline: auto;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.card-i-guess {
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px hsl(0, 0%, 12.5%, 50%);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: hsl(0, 0%, 90%);
-    align-items: center;
-}
-
-.card-i-guess img {
-    border-radius: 5px;
-    width: 60%;
-    display: block;
-}
-
 header {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    height: 4rem;
+    justify-content: space-between;
+    min-height: 4rem;
+    padding: 5px 4rem;
+    gap: 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+header h1 {
+    margin: 0;
     padding: 5px;
-    gap: 5px;
 }
 
 #header-logo {
@@ -65,12 +55,100 @@ header {
     height: 100%;
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 15px;
+    height: 33px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    min-width: 70px;
+    text-align: center;
+    transition: border-bottom 200ms, margin-bottom 200ms;
+}
+
+nav a:hover {
+    border-bottom: 7px solid black;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 1rem;
+    margin-inline: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 section {
     background-color: hsl(0, 0%, 95%);
 }
 
 section:nth-of-type(even) {
     background-color: hsl(0, 0%, 90%);
+}
+
+.card-i-guess {
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px hsl(0, 0%, 12.5%, 50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 90%);
+    min-width: 300px;
+    max-width: 450px;
+    align-items: center;
+}
+
+.card-i-guess img {
+    border-radius: 5px;
+    width: 60%;
+    display: block;
+}
+
+.contact-information {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+}
+
+.contact-information div {
+    width: 100%;
+    max-width: 300px;
+}
+
+.contact-information div h4 {
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+}
+
+.contact-information div code {
+    display: block;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: hsl(0, 0%, 80%);
+    padding: 4px;
+    margin: 4px;
+    width: 100%;
+    text-align: center;
+    border-radius: 2px;
 }
 
 .footer {
