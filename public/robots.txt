@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://www.artisansolutions.com/sitemap.xml
+Sitemap: http://www.artisansolutions.com/sitemap.txt
