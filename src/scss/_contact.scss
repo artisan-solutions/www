@@ -20,7 +20,7 @@
         code {
             display: block;
             font-size: 1rem;
-            font-family: "Red Hat Mono", "Courier New", Courier, monospace;
+            font-family: var(--font-mono);
             background-color: hsl(0, 0%, 98%);
             padding: 0.25rem;
             margin: 0.5rem 0;

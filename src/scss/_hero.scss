@@ -1,0 +1,54 @@
+body {
+    background-image: url("hero.webp");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#hero {
+    height: 700px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    .hero-definition-container {
+        background-color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.2rem;
+        max-width: 400px;
+
+        .hero-topline {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            * {
+                margin: 0;
+            }
+
+            .hero-word {
+                font-size: 2em;
+            }
+            .hero-type {
+                font-size: 1.3em;
+                margin-top: 0.5em;
+                color: #888;
+            }
+        }
+
+        .hero-word {
+            font-family: var(--font-logo);
+            font-weight: 900;
+        }
+
+        .hero-pronounciation {
+            color: #888;
+            font-size: 1.25em;
+        }
+
+        .hero-list {
+            li {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}
