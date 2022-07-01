@@ -17,8 +17,8 @@ const handleScrollPadding = () => {
 };
 
 const updateNavbar = () => {
-    const navbar = document.querySelector("#header");
-    const html = document.querySelector("html");
+    const navbar = document.querySelector("#header")!;
+    const html = document.querySelector("html")!;
 
     if (html.scrollTop !== 0) {
         navbar.removeAttribute("class");
