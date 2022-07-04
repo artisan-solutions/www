@@ -14,8 +14,9 @@ body {
         background-color: white;
         padding: 1rem 2rem;
         margin: 1rem;
-        border-radius: 0.2rem;
+        border-radius: var(--border-radius);
         max-width: 400px;
+        box-shadow: var(--shadow);
 
         .hero-topline {
             display: flex;

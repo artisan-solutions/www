@@ -14,7 +14,7 @@
     --clr-txt-highlight: hsl(0, 0%, 0%);
     --shadow: 0px 2px 3px hsl(0, 0%, 12.5%, 20%),
         0px 0px 3px hsl(0, 0%, 12.5%, 20%);
-    --border-radius: 0.2rem;
+    --border-radius: 0.4rem;
     --font-text: "Public Sans", Helvetica, Arial, sans-serif;
     --font-logo: "Playfair Display", Georgia, "Times New Roman", serif;
     --font-mono: "Red Hat Mono", "Courier New", Courier, monospace;
@@ -70,4 +70,21 @@ h6,
 b,
 strong {
     color: var(--clr-txt-highlight);
+}
+
+.wave-divider {
+    line-height: 0;
+    background-color: hsl(0, 0%, 95%);
+    * {
+        height: 2rem;
+        width: 100%;
+    }
+
+    &.flipped {
+        transform: scaleY(-1);
+    }
+
+    &.transparent {
+        background-color: transparent;
+    }
 }
