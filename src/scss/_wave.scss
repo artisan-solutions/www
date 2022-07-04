@@ -1,0 +1,16 @@
+.wave-divider {
+    line-height: 0;
+    background-color: hsl(0, 0%, 95%);
+    * {
+        height: 2rem;
+        width: 100%;
+    }
+
+    &.flipped {
+        transform: scaleY(-1);
+    }
+
+    &.transparent {
+        background-color: transparent;
+    }
+}

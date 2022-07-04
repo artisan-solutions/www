@@ -1,6 +1,7 @@
 @use "./scss/contact";
 @use "./scss/header";
 @use "./scss/card";
+@use "./scss/wave";
 @use "./scss/hero";
 
 *,
@@ -70,21 +71,4 @@ h6,
 b,
 strong {
     color: var(--clr-txt-highlight);
-}
-
-.wave-divider {
-    line-height: 0;
-    background-color: hsl(0, 0%, 95%);
-    * {
-        height: 2rem;
-        width: 100%;
-    }
-
-    &.flipped {
-        transform: scaleY(-1);
-    }
-
-    &.transparent {
-        background-color: transparent;
-    }
 }
