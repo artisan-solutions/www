@@ -8,10 +8,10 @@
 
     .card {
         border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
+        // box-shadow: var(--shadow);
         display: flex;
         flex-direction: column;
-        background-color: hsl(0, 0%, 98%);
+        background-color: hsl(0, 0%, 100%);
         padding: 2rem;
         align-items: center;
 
