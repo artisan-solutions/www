@@ -1,19 +1,25 @@
 .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: 1fr;
-    justify-items: center;
-    gap: 1rem;
+    & {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        justify-items: center;
+        gap: 1rem;
+    }
+
     padding: 0.5rem;
 
     .card {
+        & {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         border-radius: var(--border-radius);
-        // box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: column;
         background-color: hsl(0, 0%, 100%);
         padding: 2rem;
-        align-items: center;
+        // box-shadow: var(--shadow);
 
         img {
             border-radius: var(--border-radius);
