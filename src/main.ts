@@ -2,12 +2,11 @@ import "./style.scss";
 
 const resizeScrollPadding = () => {
     const navigationHeight =
-        document.querySelector<HTMLElement>("#primary-navigation")?.offsetTop ??
-        "4rem";
+        document.querySelector<HTMLElement>("#header")?.offsetHeight ?? "64";
 
     document.documentElement.style.setProperty(
         "--scroll-padding",
-        navigationHeight.toString()
+        navigationHeight.toString() + "px"
     );
 };
 

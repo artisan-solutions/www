@@ -5,7 +5,8 @@ body {
 }
 
 #hero {
-    height: 700px;
+    min-height: 700px;
+    padding: calc(var(--scroll-padding) * 1.1) 0;
     display: grid;
     align-items: center;
     justify-content: center;

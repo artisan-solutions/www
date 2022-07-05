@@ -38,6 +38,14 @@
     margin: 0;
     padding: 0.3125rem;
     font-family: var(--font-logo);
+    text-align: center;
+
+    #header-tagline {
+        display: block;
+        font-size: 0.5em;
+        font-family: var(--font-text);
+        transition: inherit;
+    }
 }
 
 #primary-nav {
@@ -72,6 +80,10 @@
 
         #header-logo {
             font-size: 2em;
+
+            #header-tagline {
+                display: none;
+            }
         }
     }
 }
