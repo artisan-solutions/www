@@ -9,6 +9,17 @@
 
     padding: 0.5rem;
 
+    & > a {
+        .card {
+            transition: 100ms transform linear;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        text-decoration: none;
+        color: unset;
+    }
+
     .card {
         & {
             display: flex;
@@ -23,8 +34,12 @@
 
         img {
             border-radius: var(--border-radius);
-            width: 60%;
+            width: 80%;
             display: block;
+
+            &.large {
+                width: 100%;
+            }
         }
 
         h3 {
