@@ -40,6 +40,10 @@
             &.large {
                 width: 100%;
             }
+
+            &.headshot {
+                border-radius: 50%;
+            }
         }
 
         h3 {
